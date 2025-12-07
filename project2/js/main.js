@@ -1,5 +1,8 @@
 const apiKey = "YIDsCSLlxKj1Rii6MppnGQJIOaTL56Z0";
-
+function clearGIFs() {
+    document.getElementById("searchInput").value = "";
+    document.getElementById("results").innerHTML = "";
+}
 function searchGIFs() {
     const input = document.getElementById("searchInput").value.trim();
     if (!input) return;
