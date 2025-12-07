@@ -1,0 +1,15 @@
+body {
+    font-family: 'Science Gothic', sans-serif;
+    background-image: url('../images/galaxy.png')
+}
+
+h1 {
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
