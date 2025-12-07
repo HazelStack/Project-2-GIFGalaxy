@@ -1,6 +1,13 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: 'Science Gothic', sans-serif;
-    background-image: url('../images/galaxy.png')
+    background-image: url('../images/galaxy.png');
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -9,7 +16,7 @@ h1 {
     color: white;
 }
 
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
+footer {
+    margin-top: auto;
 }
+
