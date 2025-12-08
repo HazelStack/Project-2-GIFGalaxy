@@ -1,21 +1,28 @@
 const apiKey = "YIDsCSLlxKj1Rii6MppnGQJIOaTL56Z0";
+
 function clearGIFs() {
     document.getElementById("searchInput").value = "";
     document.getElementById("results").innerHTML = "";
 }
+
 function searchGIFs() {
     const input = document.getElementById("searchInput").value.trim();
+    const container = document.getElementById("results");
     if (!input) return;
 
-    const container = document.getElementById("results");
-    container.innerHTML = "<p class='text-center'>Loading GIFs...</p>";
-    
+    container.innerHTML = `
+        <div class="d-flex justify-content-center my-4">
+            <div class="spinner-border text-secondary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    `;
+
     const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${encodeURIComponent(input)}&limit=24&rating=g`;
 
     fetch(url)
-        .then(response => response.json())
+        .then(res => res.json())
         .then(data => {
-            const container = document.getElementById("results");
             container.innerHTML = "";
 
             if (data.data.length === 0) {
@@ -35,14 +42,11 @@ function searchGIFs() {
                         </div>
                     </div>
                 `;
+
                 container.appendChild(col);
             });
         })
-        .catch(error => {
-            console.error("Error fetching GIFs:", error);
-            const container = document.getElementById("results");
+        .catch(() => {
             container.innerHTML = "<p class='text-center text-danger'>Oops! Something went wrong. Please try again.</p>";
         });
 }
-
-
