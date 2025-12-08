@@ -12,3 +12,6 @@ GIF Galaxy is an interstellar web application that lets users embark on a cosmic
 2. CSS
 3. Bootstrap v5.3.8
 4. JavaScript
+## Wireframes
+### Home Page - Desktop Version
+![Home Page Wireframe](./project2/images/Home-Desktop.drawio.svg)
