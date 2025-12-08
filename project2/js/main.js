@@ -1,10 +1,8 @@
 const apiKey = "YIDsCSLlxKj1Rii6MppnGQJIOaTL56Z0";
-
 function clearGIFs() {
     document.getElementById("searchInput").value = "";
     document.getElementById("results").innerHTML = "";
 }
-
 function searchGIFs() {
     const input = document.getElementById("searchInput").value.trim();
     const container = document.getElementById("results");
@@ -23,28 +21,30 @@ function searchGIFs() {
     fetch(url)
         .then(res => res.json())
         .then(data => {
-            container.innerHTML = "";
+            setTimeout(() => {
+                container.innerHTML = "";
 
-            if (data.data.length === 0) {
-                container.innerHTML = "<p class='text-center'>No GIFs found for this search.</p>";
-                return;
-            }
+                if (data.data.length === 0) {
+                    container.innerHTML = "<p class='text-center'>No GIFs found for this search.</p>";
+                    return;
+                }
 
-            data.data.forEach(gif => {
-                const col = document.createElement("div");
-                col.className = "col-12 col-sm-6 col-md-3 mb-4";
+                data.data.forEach(gif => {
+                    const col = document.createElement("div");
+                    col.className = "col-12 col-sm-6 col-md-3 mb-4";
 
-                col.innerHTML = `
-                    <div class="card h-100">
-                        <img src="${gif.images.fixed_height.url}" class="card-img-top" alt="${gif.title}">
-                        <div class="card-body">
-                            <p class="card-text text-truncate">${gif.title}</p>
+                    col.innerHTML = `
+                        <div class="card h-100">
+                            <img src="${gif.images.fixed_height.url}" class="card-img-top" alt="${gif.title}">
+                            <div class="card-body">
+                                <p class="card-text text-truncate">${gif.title}</p>
+                            </div>
                         </div>
-                    </div>
-                `;
+                    `;
 
-                container.appendChild(col);
-            });
+                    container.appendChild(col);
+                });
+            }, 1000);
         })
         .catch(() => {
             container.innerHTML = "<p class='text-center text-danger'>Oops! Something went wrong. Please try again.</p>";
