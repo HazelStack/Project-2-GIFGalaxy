@@ -7,6 +7,9 @@ function searchGIFs() {
     const input = document.getElementById("searchInput").value.trim();
     if (!input) return;
 
+    const container = document.getElementById("results");
+    container.innerHTML = "<p class='text-center'>Loading GIFs...</p>";
+    
     const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${encodeURIComponent(input)}&limit=24&rating=g`;
 
     fetch(url)
@@ -22,7 +25,7 @@ function searchGIFs() {
 
             data.data.forEach(gif => {
                 const col = document.createElement("div");
-                col.className = "col-md-3 mb-4";
+                col.className = "col-12 col-sm-6 col-md-3 mb-4";
 
                 col.innerHTML = `
                     <div class="card h-100">
@@ -37,6 +40,8 @@ function searchGIFs() {
         })
         .catch(error => {
             console.error("Error fetching GIFs:", error);
+            const container = document.getElementById("results");
+            container.innerHTML = "<p class='text-center text-danger'>Oops! Something went wrong. Please try again.</p>";
         });
 }
 
