@@ -21,3 +21,8 @@ footer {
     background-color: rgba(0, 0, 0, 0.85);
 }
 
+.card-text {
+    min-height: 30px;
+
+}
+

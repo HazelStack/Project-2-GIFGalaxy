@@ -34,10 +34,10 @@ function searchGIFs() {
                     col.className = "col-12 col-sm-6 col-md-3 mb-4";
 
                     col.innerHTML = `
-                        <div class="card h-100">
-                            <img src="${gif.images.fixed_height.url}" class="card-img-top" alt="${gif.title}">
+                        <div class="card">
+                            <img src="${gif.images.fixed_height.url}" class="card-img-top"  alt="${gif.title}">
                             <div class="card-body">
-                                <p class="card-text text-truncate">${gif.title}</p>
+                                
                             </div>
                         </div>
                     `;
