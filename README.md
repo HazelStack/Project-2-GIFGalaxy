@@ -1,6 +1,8 @@
 # Project-2-GIFGalaxy
 ## Developer: [Hazel Arevalo](https://linkedin.com/in/harevalo123)
-**GIF Galaxy** is a web application that allows users to search and explore animated GIFs using the Giphy API. The platform features responsive design, dynamic rendering, and an intuitive interface to ensure fast and seamless browsing. Users can quickly discover GIFs across a wide range of categories, making GIF Galaxy a simple and efficient tool for finding animated content.
+**GIF Galaxy** is a responsive, JavaScript-powered web application that allows users to search for animated GIFs using the Giphy API. By entering any keyword, users can instantly generate a curated selection of GIFs that match their search term. The app dynamically renders each result in a clean, organized grid layout designed for easy browsing on both desktop and mobile devices.
+
+GIF Galaxy emphasizes speed, simplicity, and usability. Its interface provides immediate visual feedback, clear error messages, and smooth content updates without page reloads. Whether users are searching for reactions, moods, or something fun, GIF Galaxy turns every query into a quick voyage through a personalized universe of animated results.
 ## How to Use
 1. Type a keyword into the search bar and click **Search**.
 2. Browse the GIF results displayed in the grid.
