@@ -16,13 +16,15 @@ h1 {
     color: white;
 }
 
+.card-img-top {
+    object-fit: cover;
+    height: 220px;
+}
+
 footer {
     margin-top: auto;
     background-color: rgba(0, 0, 0, 0.85);
 }
 
-.card-text {
-    min-height: 30px;
 
-}
 

@@ -7,7 +7,7 @@ function searchGIFs() {
     const input = document.getElementById("searchInput").value.trim();
     const container = document.getElementById("results");
     if (!input) return;
-
+    
     container.innerHTML = `
         <div class="d-flex justify-content-center my-4">
             <div class="spinner-border text-secondary" role="status">
@@ -34,11 +34,8 @@ function searchGIFs() {
                     col.className = "col-12 col-sm-6 col-md-3 mb-4";
 
                     col.innerHTML = `
-                        <div class="card">
-                            <img src="${gif.images.fixed_height.url}" class="card-img-top"  alt="${gif.title}">
-                            <div class="card-body">
-                                
-                            </div>
+                        <div class="card h-100">
+                            <img src="${gif.images.original.url}" class="card-img-top" alt="${gif.title}">
                         </div>
                     `;
 
