@@ -17,15 +17,15 @@
 2. CSS
 3. Bootstrap v5.3.8
 4. JavaScript
+## Screenshots
+![Home Page Desktop](./project2/images/Home-Clear-Desktop.jpg)
+![Search Result Desktop](./project2/images/Home-Search-Desktop.jpg)
+![Search Result Mobile](./project2/images/Home-Search-Mobile.jpg)
 ## Wireframes
 ### Home Page - Desktop Version
 ![Home Page Wireframe](./project2/images/Home-Desktop.drawio.svg)
 ### Search Result - Mobile Version
 ![Search Result Mobile Wireframe](./project2/images/Mobile-Wireframe.drawio.svg)
-## Screenshots
-![Home Page Desktop](./project2/images/Home-Clear-Desktop.jpg)
-![Search Result Desktop](./project2/images/Home-Search-Desktop.jpg)
-![Search Result Mobile](./project2/images/Home-Search-Mobile.jpg)
 ## User Stories
 1. As a user, I want to search for GIFs by typing in keywords, so that I can quickly find animations that match what I'm looking for.
 2. As a user, I want GIF results to load instantly and display in an organized, responsive grid, so that I can easily browse through many GIFs on any device.
