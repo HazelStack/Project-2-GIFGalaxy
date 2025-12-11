@@ -26,13 +26,13 @@ GIF Galaxy emphasizes speed, simplicity, and usability. Its interface provides i
 3. As a user, I want to receive a clear message when my search returns no GIFs or when something goes wrong, so that I understand what happened and can try again.
 ## Wireframes
 ### Home Page - Desktop Version
-![Home Page Wireframe](./project2/images/Home-Desktop.drawio.svg)
+![Home Page Wireframe](./images/Home-Desktop.drawio.svg)
 ### Search Result - Mobile Version
-![Search Result Mobile Wireframe](./project2/images/Mobile-Wireframe.drawio.svg)
+![Search Result Mobile Wireframe](./images/Mobile-Wireframe.drawio.svg)
 ## Screenshots
-![Home Page Desktop](./project2/images/Home-Clear-Desktop.jpg)
-![Search Result Desktop](./project2/images/Home-Search-Desktop.jpg)
-![Search Result Mobile](./project2/images/Home-Search-Mobile.jpg)
+![Home Page Desktop](./images/Home-Clear-Desktop.jpg)
+![Search Result Desktop](./images/Home-Search-Desktop.jpg)
+![Search Result Mobile](./images/Home-Search-Mobile.jpg)
 ## Ideas for Future Improvement
 1. User can save favorite GIFs to revisit later using localStorage, creating a personalized collection.
 2. User can explore preset categories like "Trending," "Reactions," or "Animals" to discover GIFs more easily.
