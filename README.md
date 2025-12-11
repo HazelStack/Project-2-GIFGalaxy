@@ -20,6 +20,8 @@ GIF Galaxy emphasizes speed, simplicity, and usability. Its interface provides i
 - **JavaScript** – interactive functionality  
 - **Giphy API** – GIF search functionality  
 - **JavaScript Promises** – handling asynchronous API requests
+## Live Demo
+https://hazelstack.github.io/Project-2-GIFGalaxy/
 ## User Stories
 1. As a user, I want to search for GIFs by typing in keywords, so that I can quickly find animations that match what I'm looking for.
 2. As a user, I want GIF results to load instantly and display in an organized, responsive grid, so that I can easily browse through many GIFs on any device.
