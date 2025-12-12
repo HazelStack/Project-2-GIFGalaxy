@@ -1,13 +1,19 @@
+// GIPHY API key
 const apiKey = "YIDsCSLlxKj1Rii6MppnGQJIOaTL56Z0";
+
+// Clears the search bar and the GIF results
 function clearGIFs() {
     document.getElementById("searchInput").value = "";
     document.getElementById("results").innerHTML = "";
 }
+
+// Searches for GIFs based on user input
 function searchGIFs() {
     const input = document.getElementById("searchInput").value.trim();
     const container = document.getElementById("results");
     if (!input) return;
-    
+
+    // Show loading spinner
     container.innerHTML = `
         <div class="d-flex justify-content-center my-4">
             <div class="spinner-border text-secondary" role="status">
@@ -16,6 +22,7 @@ function searchGIFs() {
         </div>
     `;
 
+    // GIPHY search URL
     const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${encodeURIComponent(input)}&limit=24&rating=g`;
 
     fetch(url)
@@ -24,11 +31,13 @@ function searchGIFs() {
             setTimeout(() => {
                 container.innerHTML = "";
 
+                // No GIFs found
                 if (data.data.length === 0) {
                     container.innerHTML = "<p class='text-center'>No GIFs found for this search.</p>";
                     return;
                 }
 
+                // Display each GIF
                 data.data.forEach(gif => {
                     const col = document.createElement("div");
                     col.className = "col-12 col-sm-6 col-md-3 mb-4";
